@@ -67,6 +67,6 @@ export class Blockchain {
     }
 
     public async mine(): Promise<Block> {
-        return await this.m_miner.prof_of_work(this.lastBlock());
+        return this.m_miner.prof_of_work(this.lastBlock());
     }
 }
