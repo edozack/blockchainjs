@@ -12,7 +12,7 @@ export class Blockchain {
             Blockchain.m_instance = new Blockchain();
 
         return Blockchain.m_instance;
-    }
+    } 
 
     private  m_chain: Block[];
     private  m_transactions: Transaction[];

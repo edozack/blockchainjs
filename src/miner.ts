@@ -7,7 +7,7 @@ export class Miner {
     constructor() {
         this.validProff = this.validProff.bind(this);
         this.hashBlock = this.hashBlock.bind(this);
-    }
+    } 
 
     public async prof_of_work(lastBlock: Block): Promise<Block> {
         let blk = new Block(); 
