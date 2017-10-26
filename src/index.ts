@@ -16,7 +16,7 @@ app.get('/mine', (req, res) => {
     const chain = Blockchain.Instance();
         
     chain.mine().then(block => {
-        const blk = chain.createBlock(block.proof, block.previousHash);
+        const blk = chain.createBlock(block.proof, block.previousHash, block.hash);
         res.send(JSON.stringify(blk));
      })
      .catch((e) => res.send(e));                         

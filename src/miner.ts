@@ -13,7 +13,7 @@ export class Miner {
         let blk = new Block(); 
         blk.previousHash = lastBlock.previousHash;
         blk.proof = 0;
-        while (!(await this.validProff(blk, 1)))
+        while (!(await this.validProff(blk, 2)))
             blk.proof++;
 
         return blk;
@@ -29,6 +29,7 @@ export class Miner {
                 if (hash[i] != '0')
                     return false;
             }
+            block.hash = hash;
             return true;
         }
 

@@ -6,4 +6,5 @@ export class Block {
     public transactions: Transaction[];
     public proof: number;
     public previousHash: string;
+    public hash: string;
 }

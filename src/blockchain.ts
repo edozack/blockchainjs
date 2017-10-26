@@ -32,9 +32,10 @@ export class Blockchain {
         this.m_chain.push(genesis);
     }
 
-    public createBlock(proof: number, previousHash: string): Block {
+    public createBlock(proof: number, previousHash: string, hash: string): Block {
         const block = new Block(); 
-        block.previousHash = previousHash;
+        block.previousHash = this.lastBlock().hash;
+        block.hash = hash;
         block.proof = proof;
         block.timeStamp = new Date();
         block.index = this.m_chain.length + 1;
