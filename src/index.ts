@@ -26,7 +26,7 @@ app.get('/chain', (req, res) => {
 
     const chain = Blockchain.Instance();
 
-    return JSON.stringify(chain.chain());
+    res.send(JSON.stringify(chain.chain()));
 });
 
 app.post('/transaction/new', jsonParser, function (req, res) {
