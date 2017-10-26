@@ -38,8 +38,8 @@ export class Blockchain {
         block.proof = proof;
         block.timeStamp = new Date();
         block.index = this.m_chain.length + 1;
-        if(this.m_transactions.length > 0)
-            block.transactions.concat(...this.m_transactions);
+        block.transactions = [];
+        block.transactions.concat(...this.m_transactions);        
         this.m_transactions = [];
         this.m_chain.push(block);
         return block;
@@ -60,7 +60,11 @@ export class Blockchain {
         const lastBlock = this.lastBlock();
         return (lastBlock === null ? 0 : lastBlock.index + 1);
     }
-   
+ 
+    public chain(): Block[] {
+        return this.m_chain;
+    }
+
     public async mine(): Promise<Block> {
         return await this.m_miner.prof_of_work(this.lastBlock());
     }

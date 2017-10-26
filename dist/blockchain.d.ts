@@ -9,5 +9,6 @@ export declare class Blockchain {
     createBlock(proof: number, previousHash: string): Block;
     lastBlock(): Block;
     createTransaction(sender: string, recipient: string, amount: number): number;
+    chain(): Block[];
     mine(): Promise<Block>;
 }

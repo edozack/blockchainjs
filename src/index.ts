@@ -22,12 +22,12 @@ app.get('/mine', (req, res) => {
      .catch((e) => res.send(e));                         
 });
 
-/*
 app.get('/chain', (req, res) => {
-    compositionsClient.getRtm(req.query)
-        .then((result: IRtm[]) => res.send(result))
-        .catch((e) => res.sendStatus(500));
-});*/
+
+    const chain = Blockchain.Instance();
+
+    return JSON.stringify(chain.chain());
+});
 
 app.post('/transaction/new', jsonParser, function (req, res) {
     let message = req.body;
