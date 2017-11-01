@@ -1,25 +1,23 @@
 {
     "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "Launch",
-            "type": "node",
-            "request": "launch",
-            "program": "${workspaceRoot}/src/www",
-            "stopOnEntry": false,
-            "args": [],
-            "cwd": "${workspaceRoot}",
-            "preLaunchTask": "tsc",
-            "runtimeExecutable": null,
-            "runtimeArgs": [
-                "--nolazy"
-            ],
-            "env": {
-                "NODE_ENV": "development"
-            },
-            "console": "internalConsole",
-            "sourceMaps": false,
-            "outDir": null
-        }
-    ]
+    "configurations": [{
+        "name": "Launch",
+        "type": "node",
+        "request": "launch",
+        "program": "${workspaceRoot}/src/www",
+        "stopOnEntry": false,
+        "args": [],
+        "cwd": "${workspaceRoot}",
+        "preLaunchTask": "tsc",
+        "runtimeExecutable": null,
+        "runtimeArgs": [
+            "--nolazy"
+        ],
+        "env": {
+            "NODE_ENV": "development"
+        },
+        "console": "internalConsole",
+        "sourceMaps": false,
+        "outDir": null
+    }]
 }

@@ -9,7 +9,7 @@ let jsonParser = bodyParser.json();
 
 app.get('/', function (req, res) {
   res.send('Hello block chain')
-})
+}) 
  
 app.get('/mine', (req, res) => {
 
